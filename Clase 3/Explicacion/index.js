@@ -16,3 +16,14 @@ function clickParImpar() {
 		alert('CLICK IMPAR: ' + n);
 	}
 }
+
+let cosa = 1;
+let coso = "1";
+
+function esIgual() {
+	if (cosa === coso) {
+		alert('Pero esto que es?');
+	} else {
+		alert('Claro que no');
+	}
+}
