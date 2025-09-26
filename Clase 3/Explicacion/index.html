@@ -4,9 +4,31 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Clase 3 - Explicación</title>
+		<script>
+			function mostrarMensajeHeaderInterno() {
+				alert('Esto es un mensaje de JavaScript header interno');
+			}
+		</script>
 	</head>
 	<body>
 		<h1>Ejemplos de inserción de JavaScript</h1>
-		<button onclick="mostrarMensajeEnLinea()">Clic en mi (linea)</button>
+		<button onclick="mostrarMensajeEnLinea()">
+			Clic en mi (linea)
+			<script>
+				function mostrarMensajeEnLinea() {
+					alert('Esto es un mensaje de JavaScript(XXS)');
+				}
+			</script>
+		</button>
+		<br /><br />
+		<button onclick="mostrarMensajeHeaderInterno()">
+			Clic en mi (header - interno)
+		</button>
+		<br /><br />
+		<button onclick="mostrarMensajeExterno()">
+			Clic en mí (footer - externo)
+		</button>
+
+		<script src="index.js"></script>
 	</body>
 </html>
