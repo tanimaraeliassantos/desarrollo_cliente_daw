@@ -2,11 +2,11 @@ function mostrarMensajeExterno() {
 	alert('Esta es la mejor opción documento JS externo');
 }
 
-let n = 1;
+let n = 0;
 
 function mostrarMensajeExterno2() {
-	alert('Esta es la mejor opción documento JS externo DOS ' + n);
 	n++;
+	alert('Esta es la mejor opción documento JS externo DOS ' + n);
 }
 
 function clickParImpar() {
