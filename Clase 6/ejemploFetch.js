@@ -4,5 +4,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
 		console.log(users);
 		users.forEach((user) => {
 			console.log(user.name);
+            console.log(user.website);
 		});
 	});
