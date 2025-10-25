@@ -12,7 +12,7 @@ export class CommsHijo {
   @Output() saludo = new EventEmitter<string>()
 
   emitirSaludo(): void{
-    const mensaje = "Hola soy, ${nombre}"
+    const mensaje = `Hola soy, ${this.nombre}`
     this.saludo.emit(mensaje)
   }
 }
