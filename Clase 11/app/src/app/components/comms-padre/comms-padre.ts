@@ -8,8 +8,9 @@ import { CommsHijo } from '../comms-hijo/comms-hijo';
   styleUrl: './comms-padre.css',
 })
 export class CommsPadre {
-  mostrarHijo = false
-  nombre='Maria'
+  mostrarHijo = false;
+  nombre = 'Maria';
+  ultimoMensaje = ''
 
   crearHijo(): void {
     this.mostrarHijo = true;
@@ -17,13 +18,19 @@ export class CommsPadre {
 
   destruirHijo(): void {
     this.mostrarHijo = false;
+    this.ultimoMensaje = '';
   }
 
   cambiarNombre(): void {
-    if(this.nombre === 'Maria') {
-      this.nombre = 'Pedro'
+    if (this.nombre === 'Maria') {
+      this.nombre = 'Pedro';
     } else {
-      this.nombre = "Maria"
+      this.nombre = 'Maria';
     }
   }
+
+onSaludo(mensaje: string): void{
+  this.ultimoMensaje = mensaje;
+}
+
 }
