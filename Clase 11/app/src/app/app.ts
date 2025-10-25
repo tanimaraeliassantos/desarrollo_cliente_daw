@@ -4,7 +4,7 @@ import { CommsPadre } from './components/comms-padre/comms-padre';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommsPadre],
+  imports: [CommsPadre],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
