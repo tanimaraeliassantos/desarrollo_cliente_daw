@@ -3,4 +3,16 @@
   <button (click)="crearHijo()">Crear Hijo</button>
   <button (click)="destruirHijo()">Destruir Hijo</button>
   <button (click)="cambiarNombre()">Cambiar Nombre</button>
+  @if (!mostrarHijo) {
+  <div class="mensaje">
+    <p>No hay ningún hijo</p>
+  </div>
+  } @if (mostrarHijo) {
+  <app-comms-hijo [nombre]="nombre" (saludo)="onSaludo($event)"> </app-comms-hijo>
+  }
+
+  @if (ultimoMensaje) {
+    <p>Evento recibido del hijo</p>
+    <span>{{ultimoMensaje}}</span>
+  }
 </div>
