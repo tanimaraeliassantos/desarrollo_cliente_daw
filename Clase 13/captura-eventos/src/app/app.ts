@@ -1,8 +1,10 @@
+import { JsonPipe } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { single } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [JsonPipe],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -17,5 +19,13 @@ export class App {
   mensaje = signal('');
   saludarA(nombre: string) {
     this.mensaje.set(`Hola, ${nombre}`);
+  }
+
+  ultimoEvento = signal<any | null>(null);
+  capturarEvento(ev: Event) {
+    const key = ev as KeyboardEvent;
+    this.ultimoEvento.set({
+      tecla: key.key ?? null,
+    });
   }
 }
