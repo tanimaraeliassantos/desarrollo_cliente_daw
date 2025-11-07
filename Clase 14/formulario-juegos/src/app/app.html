@@ -1,19 +1,23 @@
 <h1>App de Juegos Clase 14</h1>
 
-<form action="">
+<form (submit)="publicar($event, titulo.value, imagen.value, plataforma.value, anio.valueAsNumber)">
   <label>Titulo</label>
-  <input type="text" />
+  <input type="text" #titulo />
   <br /><br />
   <label>Imagen</label>
-  <input type="text" />
+  <input type="text" #imagen />
   <br /><br />
   <label>Plataforma</label>
-  <input type="text" />
+  <input type="text" #plataforma />
   <br /><br />
   <label>Año</label>
-  <input type="number" />
+  <input type="number" #anio />
   <br /><br />
   <button type="submit">Añadir</button>
   <br /><br />
   <h2>LISTADO</h2>
+  @for (j of juegos; track $index) {
+  <h3>{{ j.titulo }} - {{ j.plataforma }} ({{ j.anio }})</h3>
+  <img [src]="j.imagen" />
+  }
 </form>
