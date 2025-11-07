@@ -1,4 +1,9 @@
 <h1>CAPTURANDO EVENTOS DEL USUARIO</h1>
 <h2>Click básico</h2>
 <button (click)="hacerClick()">Sumando clicks</button>
-<p>Cllics que llevamos: {{ clicks() }}</p>
+<p>Clics que llevamos: {{ clicks() }}</p>
+<hr />
+<h2>Click con parámetros</h2>
+<button (click)="saludarA('Pablo')">Saluda a Pablo</button>
+<button (click)="saludarA('Alejandra')">Saluda a Alejandra</button>
+<p>{{mensaje()}}</p>
