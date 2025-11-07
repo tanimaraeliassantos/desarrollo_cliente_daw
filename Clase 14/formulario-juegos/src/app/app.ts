@@ -1,12 +1,21 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
+interface Juego{
+  titulo: string;
+  imagen: string;
+  plataforma: string;
+  anio: number;
+}
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App {
   protected readonly title = signal('formulario-juegos');
-}
+  juegps: Juego[] = [];
+
+  }
+
