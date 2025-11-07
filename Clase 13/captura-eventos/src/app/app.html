@@ -6,4 +6,8 @@
 <h2>Click con parámetros</h2>
 <button (click)="saludarA('Pablo')">Saluda a Pablo</button>
 <button (click)="saludarA('Alejandra')">Saluda a Alejandra</button>
-<p>{{mensaje()}}</p>
+<p>{{ mensaje() }}</p>
+<hr />
+<h2>Capturar teclado</h2>
+<input type="text" (keydown)="capturarEvento($event)" />
+<p>{{ ultimoEvento() | json }}</p>
