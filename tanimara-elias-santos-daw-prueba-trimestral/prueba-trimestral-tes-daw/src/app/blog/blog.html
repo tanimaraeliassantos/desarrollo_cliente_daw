@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Blog de Noticias TES - Angular</h1>
+  <div class="grid-layout">
+    <div class="form-area">
+      <form (submit)="publicar($event, titulo, imagen, texto, fecha)">
+        <h2>Publicar Nueva Noticia</h2>
+        @if (mensajeError) {
+        <div>{{ mensajeError }}</div>
+        }
+        <label>Título</label>
+        <input type="text" #titulo />
+
+        <label>Imagen</label>
+        <input type="text" #imagen />
+
+        <label>Texto</label>
+        <input type="text" #texto />
+
+        <label>Fecha</label>
+        <input type="text" #fecha />
+
+        <button type="submit">Añadir noticia</button>
+      </form>
+    </div>
+    <div class="list-area">
+      <h2>LISTADO DE NOTICIAS ({{ noticias.length }})</h2>
+      @for (n of noticias; track $index) {
+      <div class="noticia-card">
+        <img [src]="n.imagen" />
+        <h3>{{ n.titulo }}</h3>
+        <p>{{ n.texto }}</p>
+        <p>Publicado el: {{ n.fecha }}</p>
+      </div>
+      }
+    </div>
+  </div>
+</div>
