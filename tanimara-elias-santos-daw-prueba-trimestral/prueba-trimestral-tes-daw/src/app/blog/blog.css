@@ -1,0 +1,38 @@
+.container {
+  background-color: antiquewhite;
+  margin: 50px;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.form-area {
+  padding: 10px;
+}
+
+.list-area {
+  padding: 10px;
+}
+
+input[type='text'],
+textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+.noticia-card {
+  padding: 10px;
+}
+
+.noticia-card img {
+  width: 100%;
+}
