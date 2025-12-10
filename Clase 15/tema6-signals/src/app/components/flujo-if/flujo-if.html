@@ -1,1 +1,9 @@
-<p>flujo-if works!</p>
+<p>Probando señales:</p>
+
+<input type="number" (click)="actualizarEdad($event.target.value)" />
+
+@if (edad() < 18) {
+<p>Menor de edad</p>
+} @else {
+<p>Mayor de edad</p>
+}
