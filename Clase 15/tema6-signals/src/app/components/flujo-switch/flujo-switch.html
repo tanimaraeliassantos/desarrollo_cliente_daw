@@ -1,0 +1,8 @@
+<p>Trabajando con switch:</p>
+
+<label>Selecciona un rol:</label>
+<select (change)="cambiarRol($any($event.target).value)">
+  @for (r of roles; track r) {
+  <option [value]="r">{{ r }}</option>
+  }
+</select>

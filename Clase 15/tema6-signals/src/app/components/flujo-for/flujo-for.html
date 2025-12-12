@@ -1,1 +1,26 @@
-<p>flujo-for works!</p>
+<p>Ejemplo con for</p>
+<button (click)="limpiarLista()">Vaciar Lista</button>
+<button (click)="restaurarLista()">Restaurar Lista</button>
+
+<ul>
+  @for (est of estudiantes(); track est.id; let i = $index, total = $count, primero = $first, ultimo
+  = $last) {
+  <p>
+    {{ i }} / {{ total }}
+    @if(primero){
+    <span>(comienzo)</span>
+    } @if(ultimo){
+    <span>(final)</span>
+    }
+  </p>
+  }
+</ul>
+
+<ul>
+  @for (est of estudiantes(); track est.id; let i = $index, total = $count, primero = $first, ultimo
+  = $last) {
+  <li>{{ i + 1 }}. {{ est.nombre }} ({{ est.edad }} años)</li>
+  } @empty {
+  <li>No hay estudiantes.</li>
+  }
+</ul>
