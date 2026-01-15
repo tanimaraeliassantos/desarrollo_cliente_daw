@@ -1,0 +1,25 @@
+<h2>Formulario Reactivo</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Nombre</label>
+    <input type="text" formControlName="nombre" />
+  </div>
+  <br />
+  <div>
+    <label>Apellidos</label>
+    <input type="text" formControlName="apellidos" />
+  </div>
+  <br />
+  <div>
+    <label>Edad</label>
+    <input type="number" formControlName="edad" />
+  </div>
+  <br />
+  <div>
+    <label>Dirección</label>
+    <input type="text" formControlName="direccion" />
+  </div>
+  <button type="submit">Enviar</button>
+</form>
+<h3>Datos del formulario</h3>
+<pre>{{form.value | json}}</pre>
