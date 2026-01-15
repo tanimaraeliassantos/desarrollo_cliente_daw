@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { FlujoIf } from './components/flujo-if/flujo-if';
 import { FlujoFor } from './components/flujo-for/flujo-for';
 import { FlujoSwitch } from './components/flujo-switch/flujo-switch';
+import { Resaltar } from "./directives/resaltar";
 
 @Component({
   selector: 'app-root',
-  imports: [FlujoIf, FlujoFor, FlujoSwitch],
+  imports: [FlujoIf, FlujoFor, FlujoSwitch, Resaltar],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

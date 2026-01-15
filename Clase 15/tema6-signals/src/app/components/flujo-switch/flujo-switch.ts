@@ -8,7 +8,7 @@ import { Component, signal } from '@angular/core';
 })
 export class FlujoSwitch {
   roles = ['admin', 'editor', 'suscriptor', 'invitado', 'Kim Jong Un'];
-  rol = signal<string>('admin');
+  rol = signal<string>('Kim Jong Un');
 
   cambiarRol(valor: string) {
     this.rol.set(valor);

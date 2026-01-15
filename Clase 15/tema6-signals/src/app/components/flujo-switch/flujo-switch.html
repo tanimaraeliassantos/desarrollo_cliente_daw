@@ -1,8 +1,18 @@
 <p>Trabajando con switch:</p>
 
 <label>Selecciona un rol:</label>
-<select (change)="cambiarRol($any($event.target).value)">
+<select (change)="cambiarRol($any($event.target).value)" id="selectorRol">
   @for (r of roles; track r) {
   <option [value]="r">{{ r }}</option>
   }
 </select>
+<p>Rol actual: {{rol()}}</p>
+@switch (rol()) {
+  @case ('admin') {
+    <p>Acceso completo al sistema</p>
+  }
+  @case ('editor') {
+    <p>Solo puede editar noticias</p>
+  }
+  @default {<p> Rol Kim Jong Un</p>}
+}

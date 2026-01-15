@@ -1,0 +1,11 @@
+import { Directive, ElementRef, Renderer2 } from '@angular/core';
+
+@Directive({
+  selector: '[appResaltar]',
+})
+export class Resaltar {
+  constructor(private el: ElementRef, private render: Renderer2) {
+    this.render.setStyle(this.el.nativeElement, 'color', 'red');
+    this.render.setStyle(this.el.nativeElement, 'font-weight', 'bold');
+  }
+}
