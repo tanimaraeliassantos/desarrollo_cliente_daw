@@ -1,0 +1,12 @@
+<h2>Formulario Template-Driven</h2>
+<form #PersonaForm="ngForm" (ngSubmit)="onSubmit(PersonaForm)">
+  <div>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" />
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" />
+  </div>
+  <button type="submit">Enviar</button>
+</form>
