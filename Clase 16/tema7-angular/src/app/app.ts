@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { ListaColoresComponent } from './components/lista-colores/lista-colores';
 import { FormTemplateComponent } from './components/form-template/form-template';
 import { FormReactivoComponent } from './components/form-reactivo/form-reactivo';
+import { FormValidadoComponent } from './components/form-validado/form-validado';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ import { FormReactivoComponent } from './components/form-reactivo/form-reactivo'
     FormTemplateComponent,
     FormTemplateComponent,
     FormReactivoComponent,
+    FormValidadoComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
