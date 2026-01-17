@@ -1,1 +1,43 @@
-<p>form-validado works!</p>
+<h2>Formulario Reactivo con Validaciones</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Nombre</label>
+    <input type="text" formControlName="nombre" />
+  </div>
+  <div>
+    <label>Email</label>
+    <input type="email" formControlName="email" />
+
+    @if (email.invalid && email.touched) { @if (email.errors?.['required']) {
+    <small style="color: red">El email es obligatorio.</small>
+    } @if (email.errors?.['email']) {
+    <small style="color: red">El email no tiene formato válido.</small>
+    } }
+  </div>
+  <div>
+    <label>Edad</label>
+    <input type="number" formControlName="edad" />
+
+    @if (edad.invalid && edad.touched) { @if (edad.errors?.['required']) {
+    <small style="color: red">La edad es obligatoria.</small>
+    } @if (edad.errors?.['rangoEdad']) {
+    <small style="color: red">
+      {{ edad.errors?.['rangoEdad']?.message }}
+    </small>
+    } }
+  </div>
+  <button type="submit" [disabled]="form.invalid">Enviar</button>
+</form>
+
+<hr />
+
+<h3>Estado del control "nombre"</h3>
+<pre>
+dirty: {{ nombre.dirty }}
+pristine: {{ nombre.pristine }}
+touched: {{ nombre.touched }}
+untouched: {{ nombre.untouched }}
+valid: {{ nombre.valid }}
+invalid: {{ nombre.invalid }}
+    </pre
+>
