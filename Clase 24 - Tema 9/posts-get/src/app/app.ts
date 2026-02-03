@@ -5,11 +5,12 @@ import { AsyncPipe } from '@angular/common';
 
 import { PostsService } from './services/posts';
 import { Post } from './models/post';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, AsyncPipe],
+  imports: [CommonModule, AsyncPipe, RouterOutlet],
   templateUrl: './app.html',
 })
 export class AppComponent {

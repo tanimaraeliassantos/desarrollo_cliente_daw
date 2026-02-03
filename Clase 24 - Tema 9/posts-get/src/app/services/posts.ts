@@ -11,4 +11,12 @@ export class PostsService {
   getAll(): Observable<Post[]> {
     return this.http.get<Post[]>(this.url);
   }
+
+  getById(id: number) {
+    return this.http.get<Post>(`${this.url}/${id}`);
+  }
+
+  delete(id: number) {
+    return this.http.delete<void>(`${this.url}/${id}`);
+  }
 }
