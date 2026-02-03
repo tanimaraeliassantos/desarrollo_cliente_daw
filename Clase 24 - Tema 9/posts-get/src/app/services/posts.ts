@@ -19,4 +19,8 @@ export class PostsService {
   delete(id: number) {
     return this.http.delete<void>(`${this.url}/${id}`);
   }
+
+  create(post: Post) {
+    return this.http.post<Post>(this.url, post);
+  }
 }
