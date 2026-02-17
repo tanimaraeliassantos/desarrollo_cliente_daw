@@ -1,0 +1,22 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: green;
+  color: white;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: large;
+  padding: 10px;
+}
