@@ -1,1 +1,33 @@
-<p>new works!</p>
+<main>
+  <h2>Nueva Serie</h2>
+
+  @if (responseId) {
+    <div>
+      <p>Serie creada con ID: {{ responseId }}</p>
+      <p>Redirigiendo a Home...</p>
+    </div>
+  }
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="title">Título</label>
+      <input id="title" formControlName="title" />
+
+      @if (form.get('title')?.invalid && form.get('title')?.touched) {
+        <small> Obligatorio, mínimo 3 caracteres </small>
+      }
+    </div>
+
+    <div>
+      <label for="channel">Canal</label>
+      <input id="channel" formControlName="channel" />
+    </div>
+
+    <div>
+      <label for="rating">Rating (0–10)</label>
+      <input id="rating" type="number" formControlName="rating" min="0" max="10" />
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">Crear Serie</button>
+  </form>
+</main>
